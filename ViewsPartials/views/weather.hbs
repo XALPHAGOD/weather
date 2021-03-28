@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{>links}}
+
+    <title>Weather</title>
+</head>
+<body>
+    
+    {{>navbar}}
+
+        <div id="search">
+            <form id="inpForm">
+                <input id="inpCity" placeholder="Enter City" autocomplete="off">
+            </form>
+            <button id="searchBtn">Go</button>
+        </div>
+        
+        <div id="output">
+            
+            <div class="comLayer L1">
+                <p id="day"></p>
+                <p id="date"></p>
+            </div>
+                
+            <div class="comLayer L2">
+                <p id="city"></p>
+            </div>
+
+            <div class="comLayer L3">
+                <div style="display: flex;">
+                    <p id="temp"></p>
+                </div>
+                <p id="weatherStat"></p>
+            </div>
+
+        </div>
+        
+    {{>footer}}
+
+    <script src="js/search.js"></script>        <!-- app.js executes all hbs linked to main including script.js -->
+
+    {{>js}}
+
+</body>
+</html>
